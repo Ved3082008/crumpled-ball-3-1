@@ -27,14 +27,9 @@ function setup() {
 
  //ground
    ground = new Ground(600, height-35, 1200, 15); 
-
    sling1= new SlingShot(paper1.body,{x:400,y:350});
-  
-  
    Engine.run(engine);
-  
 }
-
 
 function draw() {
   rectMode(CENTER);
@@ -44,25 +39,17 @@ function draw() {
   dustbinRight.display();
   dustbinMiddle.display();
   dustbinLeft.display();
-
   paper1.display();
-  
   ground.display();
-
   sling1.display();
-
   drawSprites();
-
 }
 
 function mouseDragged(){
-
   Matter.Body.setPosition(paper1.body,{x:mouseX,y:mouseY});
 }
 
-
 function mouseReleased(){
-  
   sling1.fly();
 }
 /*
